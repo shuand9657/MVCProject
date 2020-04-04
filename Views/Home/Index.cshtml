@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div>
+        <a href="@Url.Action("Customers")">EF產生的頁面</a>
+        <p>
+            <ul>
+                <li>
+                    1. 建立專案。
+                </li>
+                <li>
+                    2. 導入EF Model。
+                </li>
+                <li>
+                    3. 透過EF5.0產生對應的CRUD頁面。
+                </li>
+                <li>
+                    4. @@Url.Action跟 < a >< /a > 直接輸入網址的差別
+                    <p>
+                        <a href="../Customers">差別?</a>
+                    </p>
+                </li>
+                <li>
+                    5. 了解 Views/Shared下的 _Layout的運作方式 (Layout) <a href="https://dotblogs.com.tw/stanley14/2016/06/29/202231">參考</a>
+                    <p>可以的話，嘗試建立自己的share page, 然後套用至一個View (<a href="~/Home/TestLayout">參考</a>)</p>
+                </li>
+                <li>
+                    6. 嘗試修改Views/Shared下的 _Layout的連結，做到本頁上方「Customers Page」的效果
+                </li>
+            </ul>
+        </p>
+    </div>
+</div>
