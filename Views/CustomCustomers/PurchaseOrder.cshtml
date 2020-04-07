@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MVCProject.ViewModels.CustomerPurchaseOrder>
+@using PagedList
+@using PagedList.Mvc
+@{
+    ViewBag.Title = "PurchaseOrder";
+}
+
+<h2>PurchaseOrder</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3">
+            @Html.DisplayNameFor(model => model.ContactName)
+        </div>
+        <div class="col-sm-3">
+            @Html.DisplayNameFor(model => model.CustomerID)
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderID)
+        </div>
+        <div class="col-sm-2">
+            @Html.DisplayNameFor(model => model.OrderDate_str)
+        </div>
+        <div class="col-sm-2">Function</div>
+    </div>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-3">
+                @Html.DisplayFor(modelItem => item.ContactName)
+            </div>
+            <div class="col-sm-3">
+                @Html.DisplayFor(modelItem => item.CustomerID)
+            </div>
+            <div class="col-sm-2">
+                @Html.DisplayFor(modelItem => item.OrderID)
+            </div>
+            <div class="col-sm-2">
+                @Html.DisplayFor(modelItem => item.OrderDate_str)
+            </div>
+            <div class="col-sm-2">
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("訂單詳情", "OrderDetail", new { id= item.OrderID}) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </div>
+        }
+    </div>
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center">
+            @Html.PagedListPager((IPagedList)Model, x => Url.Action("PurchaseOrder", new { page = x }))
+        </div>
+    </div>
+</div>

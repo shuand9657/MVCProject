@@ -254,6 +254,8 @@
       <DependentUpon>NorthWindDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\CustomerPurchaseOrder.cs" />
+    <Compile Include="ViewModels\OrderViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -318,6 +320,8 @@
     <Content Include="Views\Home\TestLayout.cshtml" />
     <Content Include="Views\CustomCustomers\Search.cshtml" />
     <Content Include="Views\CustomCustomers\Index.cshtml" />
+    <Content Include="Views\CustomCustomers\PurchaseOrder.cshtml" />
+    <Content Include="Views\CustomCustomers\OrderDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
